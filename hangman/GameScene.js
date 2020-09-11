@@ -11,15 +11,14 @@ class GameScene extends Phaser.Scene{
     preload(){
         this.load.image('bg_img', 'assets/bg.jpg');
         this.load.text('movies', 'assets/movies.txt');
-        this.load.image('h1', 'assets/hman/h1.jpg');
-        this.load.image('h2', 'assets/hman/h2.jpg');
-        this.load.image('h3', 'assets/hman/h3.jpg');
-        this.load.image('h4', 'assets/hman/h4.jpg');
-        this.load.image('h5', 'assets/hman/h5.jpg');
-        this.load.image('h6', 'assets/hman/h6.jpg');
-        this.load.image('h7', 'assets/hman/h7.jpg');
-        this.load.image('h8', 'assets/hman/h8.jpg');
-        //this.load.spritesheet('character', 'assets/character_spritesheet.png', {frameWidth: 80, frameHeight: 110});
+        this.load.image('h1', 'assets/hman/h1.JPG');
+        this.load.image('h2', 'assets/hman/h2.JPG');
+        this.load.image('h3', 'assets/hman/h3.JPG');
+        this.load.image('h4', 'assets/hman/h4.JPG');
+        this.load.image('h5', 'assets/hman/h5.JPG');
+        this.load.image('h6', 'assets/hman/h6.JPG');
+        this.load.image('h7', 'assets/hman/h7.JPG');
+        this.load.image('h8', 'assets/hman/h8.JPG');
         this.load.audio('correct', 'assets/528862__eponn__beep-4.wav');
         this.load.audio('error', 'assets/483598__raclure__wrong.mp3');
         this.load.audio('win', 'assets/51746__erkanozan__clap.wav');
@@ -95,7 +94,6 @@ class GameScene extends Phaser.Scene{
             if(!matched)
             {
                 errorSound.play();
-                console.log('yes');
                 gameState.hmanState += 1;
                 this.add.image(600, 350, hmanImages[gameState.hmanState]).setScale(0.8, 0.6);
             }

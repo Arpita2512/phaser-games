@@ -14,7 +14,7 @@ The classic guessing game for movie names.
 2. Sounds:
     - Correct Beep: **beep-4.wav by Eponn** from [freesound](https://freesound.org/people/Eponn/sounds/528862/) licensed CC0
 
-    - Error Sound: **wrong.mp3 by Raclure** from [freesound](https://freesound.org/people/Raclure/sounds/483598/) licensed CC)
+    - Error Sound: **wrong.mp3 by Raclure** from [freesound](https://freesound.org/people/Raclure/sounds/483598/) licensed CC0
 
     - Win Sound: **clap.wav by erkanozan** from [freesound](https://freesound.org/people/erkanozan/sounds/51746/) licensed CC0
 

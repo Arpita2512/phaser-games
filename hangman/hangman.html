@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style media='screen' type='text/css'>
+        @font-face {
+          font-family: font1;
+          src: url('assets/orangejuice2.0.ttf');
+          font-weight:400;
+          font-weight:normal;
+        }
+    </style>
+    <style type="text/css">
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: rgb(44, 43, 43);
+      }
+  
+      canvas {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+
+</head>
+
+<body>
+  <div style="font-family:font1; position:absolute; left:-1000px; visibility:hidden;">.</div>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
+  <script src="StartScene.js"></script>
+  <script src="GameScene.js"></script>
+  <script src="WinScene.js"></script>
+  <script src="LoseScene.js"></script>
+  <script src="game.js"></script>
+</body>
+
+
+</html>

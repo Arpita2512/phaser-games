@@ -45,24 +45,26 @@ class HelpScene extends Phaser.Scene{
         });
         this.add.image(300, 320, 'mask').setScale(.7);
         this.add.image(360, 320, 'sanitiser').setScale(.7);
+        
+        const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
 
-        this.add.text(100, 420, 'Use arrow keys to move your character', {
+        this.add.text(screenCenterX, 420, 'Use arrow keys to move your character', {
             fontFamily: 'Comic Sans MS',
             fontStyle: 'bold',
             fontSize: '20px',
-            color: '#DBFEE7', //'#f0903c',
+            color: '#DBFEE7', 
             stroke: '#000000',
             strokeThickness: 7
-        });
+        }).setOrigin(0.5);
 
-        this.add.text(180, 480, 'Click to begin game!', {
+        this.add.text(screenCenterX, 480, 'Click to begin game!', {
             fontFamily: 'Comic Sans MS',
             fontStyle: 'bold',
             fontSize: '20px',
-            color: '#DBFEE7', //'#f0903c',
+            color: '#DBFEE7',
             stroke: '#000000',
             strokeThickness: 7
-        });
+        }).setOrigin(0.5);
 
         this.input.on('pointerup', () => {
             this.scene.stop('HelpScene');

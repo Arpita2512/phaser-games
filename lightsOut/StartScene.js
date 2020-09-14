@@ -15,8 +15,9 @@ class StartScene extends Phaser.Scene{
             volume: 0.3
         });
         
- 
-        const logo_sprite = this.add.sprite(400, 180, 'logo');
+        const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
+        const logo_sprite = this.add.sprite(screenCenterX, 180, 'logo').setOrigin(0.5);
+        
         this.anims.create({
             key: 'logo_anim',
             frames: this.anims.generateFrameNames('logo', {start:0, end:20}),
@@ -25,11 +26,12 @@ class StartScene extends Phaser.Scene{
         });
         logo_sprite.anims.play('logo_anim', true);
         
-        this.add.text(270, 420, 'Click to play!', {
+        this.add.text(screenCenterX, 420, 'Click to play!', {
             fontFamily: 'Lucida Console',
             fontStyle: 'bold',
             fontSize: '28px'
-        });
+        }).setOrigin(0.5);
+        
         this.input.on('pointerup', () => {
             this.scene.stop('StartScene');
             this.scene.start('HelpScene');

@@ -13,11 +13,12 @@ class StartScene extends Phaser.Scene{
         this.add.text(screenCenterX, 120, 'Hangman', {
         fontFamily: 'font1',
         fontSize: '120px'
-        });      
+        }).setOrigin(0.5);
+        
         this.add.text(screenCenterX, 420, 'Click to play!', {
             fontFamily: 'font1',
             fontSize: '40px'
-        });
+        }).setOrigin(0.5);
         
         this.input.on('pointerup', () => {
             this.scene.stop('StartScene');

@@ -12,9 +12,9 @@ class EndScene extends Phaser.Scene{
     }
     create(){
         const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
-        this.add.image(screenCenterX, 180, 'gameOver').setScale(.8).setOrigin(0.5);
+        this.add.image(screenCenterX, 150, 'gameOver').setScale(.8).setOrigin(0.5);
         
-        this.add.text(screenCenterX, 320, `Game Over!\n\nScore: ${score}`, {
+        this.add.text(screenCenterX, 320, `Game Over!\n\n Score: ${score}`, {
             fontFamily: 'Comic Sans MS',
             fontStyle: 'bold',
             fontSize: '24px',

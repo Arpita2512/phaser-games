@@ -3,24 +3,18 @@ class StartScene extends Phaser.Scene{
         super({key: 'StartScene'});
     }
     preload(){
-        //this.load.audio('bgMusic', 'assets/bgm.mp3');
         this.load.image('bg_img', 'assets/bg.jpg');
     }
     create(){
         this.bg = this.add.image(0, 0, 'bg_img').setScale(0.49, 0.63).setOrigin(0, 0);
-        /*
-        var music = this.sound.add('bgMusic');
         
-        music.play({
-            loop: true,
-            volume: 0.3
-        });
-        */
-        this.add.text(180, 120, 'Hangman', {
+        const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
+        
+        this.add.text(screenCenterX, 120, 'Hangman', {
         fontFamily: 'font1',
         fontSize: '120px'
         });      
-        this.add.text(290, 420, 'Click to play!', {
+        this.add.text(screenCenterX, 420, 'Click to play!', {
             fontFamily: 'font1',
             fontSize: '40px'
         });

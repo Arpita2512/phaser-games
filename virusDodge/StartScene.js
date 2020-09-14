@@ -14,14 +14,17 @@ class StartScene extends Phaser.Scene{
         music.play({loop: true});
 
         this.add.image(280, 180, 'logo');
-        this.add.text(170, 420, 'Click to continue!', {
+        
+        const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
+        this.add.text(screenCenterX, 420, 'Click to continue!', {
             fontFamily: 'Comic Sans MS',
             fontStyle: 'bold',
             fontSize: '24px',
-            color: '#DBFEE7', //'#f0903c',
+            color: '#DBFEE7',
             stroke: '#000000',
             strokeThickness: 7
-        });
+        }).setOrigin(0.5);
+        
         this.add.image(220, 80, 'virus2').setScale(.6);
         this.add.image(430, 255, 'virus1').setScale(.6);
 

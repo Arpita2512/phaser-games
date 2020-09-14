@@ -5,7 +5,7 @@ class HelpScene extends Phaser.Scene{
     create(){
         const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         
-        this.add.text(screenCenterX, 120, "Jojo is a very naughty boy!", {
+        this.add.text(screenCenterX, 80, "Jojo is a very naughty boy!", {
             fontFamily: 'Lucida Console',
             fontStyle: 'bold',
             fontSize: '28px'

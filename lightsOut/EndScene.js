@@ -8,23 +8,26 @@ class EndScene extends Phaser.Scene{
         score = data.score;
     }
     create(){
-        this.add.text(270, 150, 'Game Over!', {
+        const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
+        
+        this.add.text(screenCenterX, 150, 'Game Over!', {
             fontFamily: 'Lucida Console',
             fontStyle: 'bold',
             fontSize: '40px'
-        });
+        }).setOrigin(0.5);
         
-        this.add.text(300, 300, `Score: ${score}`, {
+        this.add.text(screenCenterX, 300, `Score: ${score}`, {
             fontFamily: 'Lucida Console',
             fontStyle: 'bold',
             fontSize: '28px'
-        });
+        }).setOrigin(0.5);
 
-        let again = this.add.text(200, 400, 'Click Here to Try Again!', {
+        let again = this.add.text(screenCenterX, 400, 'Click Here to Try Again!', {
             fontFamily: 'Lucida Console',
             fontStyle: 'bold',
             fontSize: '28px',
-        });
+        }).setOrigin(0.5);
+        
         again.setInteractive();
         again.on('pointerup', () => {
             this.scene.stop('EndScene');

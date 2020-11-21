@@ -33,7 +33,7 @@ class StartScene extends Phaser.Scene{
         });
     }
     update(){
-        this.bg.tilePositionX += 2;
+        this.bg.tilePositionX += 1.5;
     }
     
 }

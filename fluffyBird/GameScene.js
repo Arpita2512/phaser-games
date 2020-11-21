@@ -30,9 +30,9 @@ class GameScene extends Phaser.Scene{
         const obstacleGen = () => {
             const yTopCoord = Math.random()*100;
             const yBottomCoord = yTopCoord + 550;
-            const o1 = this.physics.add.sprite(820, yTopCoord, 'obstacleTop').setScale(0.8, 1.5);
+            const o1 = this.physics.add.sprite(850, yTopCoord, 'obstacleTop').setScale(0.8, 1.5);
             o1.body.allowGravity = false;
-            const o2 = this.physics.add.sprite(820, yBottomCoord, 'obstacleBottom').setScale(0.8, 1.5);
+            const o2 = this.physics.add.sprite(850, yBottomCoord, 'obstacleBottom').setScale(0.8, 1.5);
             o2.body.allowGravity = false;
             gameState.obstacleList.push(o1);
             gameState.obstacleList.push(o2);
@@ -40,7 +40,7 @@ class GameScene extends Phaser.Scene{
         };
         
         const obstacleGenLoop = this.time.addEvent({
-            delay: 1500,
+            delay: 800,
             callback: obstacleGen,
             loop: true,
         });
@@ -60,7 +60,7 @@ class GameScene extends Phaser.Scene{
 
     update(){
         if(gameState.flag && gameState.bird.y < 600){
-            this.bg.tilePositionX += 2;
+            this.bg.tilePositionX += 1.5;
             for(let i = 0; i < gameState.obstacleList.length; i++){
                 if(gameState.obstacleList[i].x < -50){
                     gameState.obstacleList[i].destroy();
@@ -71,12 +71,9 @@ class GameScene extends Phaser.Scene{
             }
         }
         else{
-            //this.scene.pause();
             let temp = gameState.score;
             this.scene.stop('GameScene');
             this.scene.start('EndScene', {score: temp});
         }
-        //gameState.o1.x -= 2;
-        //gameState.o2.x -= 2;
     }
 }

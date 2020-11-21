@@ -6,7 +6,7 @@ class StartScene extends Phaser.Scene{
         this.load.image('bg_img', 'assets/bg.jpg');
     }
     create(){
-        this.bg = this.add.image(0, 0, 'bg_img').setScale(0.49, 0.63).setOrigin(0, 0);
+        this.bg = this.add.image(0, 0, 'bg_img').setScale(0.61, 0.63).setOrigin(0, 0);
         
         const screenCenterX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         

@@ -27,7 +27,7 @@ class GameScene extends Phaser.Scene{
 
     create(){
         gameState.hmanState = 0;
-        this.bg = this.add.image(0, 0, 'bg_img').setScale(0.49, 0.63).setOrigin(0, 0);
+        this.bg = this.add.image(0, 0, 'bg_img').setScale(0.61, 0.63).setOrigin(0, 0);
 
         let cache = this.cache.text;
         let movieList = cache.get('movies');
@@ -52,7 +52,7 @@ class GameScene extends Phaser.Scene{
         
         gameState.guessText = this.add.text(80, 120, guessName.join(' '), {
             fontFamily: 'font1',
-            fontSize: '50px'
+            fontSize: '60px'
         });
         
         gameState.keyPressedText = this.add.text(100, 320, "Key Pressed :", {
@@ -64,7 +64,7 @@ class GameScene extends Phaser.Scene{
             'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8'
         ];
 
-        this.add.image(600, 350, hmanImages[gameState.hmanState]).setScale(0.8, 0.6);
+        this.add.image(700, 350, hmanImages[gameState.hmanState]).setScale(0.8, 0.6);
 
         var correctSound = this.sound.add('correct');
         var errorSound = this.sound.add('error');
@@ -95,7 +95,7 @@ class GameScene extends Phaser.Scene{
             {
                 errorSound.play();
                 gameState.hmanState += 1;
-                this.add.image(600, 350, hmanImages[gameState.hmanState]).setScale(0.8, 0.6);
+                this.add.image(700, 350, hmanImages[gameState.hmanState]).setScale(0.8, 0.6);
             }
         }, this);
 

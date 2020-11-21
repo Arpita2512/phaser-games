@@ -52,7 +52,7 @@ class GameScene extends Phaser.Scene{
         
         gameState.guessText = this.add.text(80, 120, guessName.join(' '), {
             fontFamily: 'font1',
-            fontSize: '60px'
+            fontSize: '50px'
         });
         
         gameState.keyPressedText = this.add.text(100, 320, "Key Pressed :", {

@@ -6,7 +6,7 @@ The classic guessing game for movie names.
 # Acknowledgements
 
 1. Images/Sprites:
-    - Font: **orangejuice2.0.ttf by Brittney Murphy** from [1001freefonts](https://www.1001freefonts.com/orange-juice.font)
+    - Font: **AveriaLibre-Bold.ttf by  Dan Sayers** from [GoogleFonts](https://fonts.google.com/specimen/Averia+Libre#standard-styles) under Open Font License
 
     - Background: **School Chalkboard by Karen Arnold** from [PublicDomainPictures](https://www.publicdomainpictures.net/en/view-image.php?image=37299&picture=school-chalkboard) licensed CC0
     
